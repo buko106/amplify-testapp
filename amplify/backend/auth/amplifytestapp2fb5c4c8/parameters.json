@@ -1,0 +1,66 @@
+{
+    "identityPoolName": "amplifytestapp2fb5c4c8_identitypool_2fb5c4c8",
+    "allowUnauthenticatedIdentities": false,
+    "lambdaLogPolicy": "amplif_2fb5c4c8_lambda_log_policy",
+    "openIdLambdaRoleName": "amplif_2fb5c4c8_openid_lambda_role",
+    "openIdRolePolicy": "amplif_2fb5c4c8_openid_pass_role_policy",
+    "openIdLambdaIAMPolicy": "amplif_2fb5c4c8_openid_lambda_iam_policy",
+    "openIdLogPolicy": "amplif_2fb5c4c8_openid_lambda_log_policy",
+    "userPoolName": "amplifytestapp2fb5c4c8_userpool_2fb5c4c8",
+    "autoVerifiedAttributes": [
+        "email"
+    ],
+    "mfaConfiguration": "OFF",
+    "mfaTypes": [
+        "SMS Text Message"
+    ],
+    "roleName": "amplif2fb5c4c8_sns-role",
+    "roleExternalId": "amplif2fb5c4c8_role_external_id",
+    "policyName": "amplif2fb5c4c8-sns-policy",
+    "smsAuthenticationMessage": "Your authentication code is {####}",
+    "smsVerificationMessage": "Your verification code is {####}",
+    "emailVerificationSubject": "Your verification code",
+    "emailVerificationMessage": "Your verification code is {####}",
+    "defaultPasswordPolicy": false,
+    "passwordPolicyMinLength": 8,
+    "passwordPolicyCharacters": [],
+    "requiredAttributes": [],
+    "userpoolClientName": "amplif2fb5c4c8_app_client",
+    "userpoolClientGenerateSecret": true,
+    "userpoolClientRefreshTokenValidity": 30,
+    "userpoolClientWriteAttributes": [
+        "email"
+    ],
+    "userpoolClientReadAttributes": [
+        "email"
+    ],
+    "mfaLambdaRole": "amplif2fb5c4c8_totp_lambda_role",
+    "mfaLambdaLogPolicy": "amplif2fb5c4c8_totp_lambda_log_policy",
+    "mfaPassRolePolicy": "amplif2fb5c4c8_totp_pass_role_policy",
+    "mfaLambdaIAMPolicy": "amplif2fb5c4c8_totp_lambda_iam_policy",
+    "userpoolClientLambdaRole": "amplif2fb5c4c8_userpoolclient_lambda_role",
+    "userpoolClientLogPolicy": "amplif2fb5c4c8_userpoolclient_lambda_log_policy",
+    "userpoolClientLambdaPolicy": "amplif2fb5c4c8_userpoolclient_lambda_iam_policy",
+    "userpoolClientSetAttributes": false,
+    "resourceName": "amplifytestapp2fb5c4c8",
+    "authSelections": "identityPoolAndUserPool",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "authRoleArn": {
+        "Fn::GetAtt": [
+            "AuthRole",
+            "Arn"
+        ]
+    },
+    "unauthRoleArn": {
+        "Fn::GetAtt": [
+            "UnauthRole",
+            "Arn"
+        ]
+    },
+    "useDefault": "default"
+}
