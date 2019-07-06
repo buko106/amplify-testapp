@@ -18,6 +18,14 @@ const App: React.FC = () => {
         >
           Learn React
         </a>
+        and
+        <a
+          className="App-link"
+          href="https://aws-amplify.github.io"
+          target="_blank"
+        >
+          AWS Amplify
+        </a>
       </header>
     </div>
   );
