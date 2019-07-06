@@ -7,6 +7,8 @@ import { CognitoUser } from '@aws-amplify/auth';
 import awsconfig from './aws-exports';
 import { withAuthenticator } from 'aws-amplify-react';
 
+import { Button, Container, CssBaseline } from '@material-ui/core';
+
 Amplify.configure(awsconfig);
 
 interface Props {
@@ -32,10 +34,25 @@ class App extends React.Component<Props, State> {
 
   render() {
     const {username} = this.state;
+
     return (
-      <div>
-        Hello {username}.
-      </div>
+      <>
+        <Container component="main" maxWidth="xs">
+          <CssBaseline/>
+          <div>
+            <p>
+              こんにちは、{username}さん
+            </p>
+            <Button
+              variant="outlined"
+              color="primary"
+              onClick={() => Auth.signOut()}
+            >
+              ログアウト
+            </Button>
+          </div>
+        </Container>
+      </>
     )
   }
 }
