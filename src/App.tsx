@@ -64,17 +64,24 @@ const signUpConfig = {
   defaultCountryCode: '1',
   signUpFields: [
     {
+      label: 'Email',
+      key: 'email',
+      required: true,
+      displayOrder: 1,
+      type: 'string'
+    },
+    {
       label: usernameAttributes,
       key: 'username',
       required: true,
-      displayOrder: 1,
+      displayOrder: 2,
       type: 'string'
     },
     {
       label: 'Password',
       key: 'password',
       required: true,
-      displayOrder: 2,
+      displayOrder: 3,
       type: 'password'
     },
   ]
